@@ -30,8 +30,8 @@
     .btn:hover {
       transform: scale(1.05);
     }
-    .java { background-color: #e67e22; color: white; }
-    .python { background-color: #4caf50; color: white; }
+    .java { background-color: #f44336; color: white; }
+    .python { background-color: #e67e22; color: white; }
     .battle {
       display: none;
       flex-direction: column;
@@ -50,8 +50,8 @@
       height: 100%;
       transition: width 0.5s;
     }
-    .java-bar { background: #e67e22; width: 100%; }
-    .python-bar { background: #4caf50; width: 100%; }
+    .java-bar { background: #f44336; width: 100%; }
+    .python-bar { background: #e67e22; width: 100%; }
     .result {
       font-size: 20px;
       margin-top: 20px;
@@ -60,7 +60,7 @@
   </style>
 </head>
 <body>
-  <h1>Wybierz swój język!</h1>
+  <h1>Wybierz język, którym chcesz grać. Niech wygra lepszy!</h1>
   <button class="btn java" onclick="startBattle('Java')">Java</button>
   <button class="btn python" onclick="startBattle('Python')">Python</button>
 
@@ -93,13 +93,15 @@
       result.style.display = "none";
 
       // Animacja walki
-      setTimeout(() => { javaHP.style.width = "30%"; }, 1000);
+      setTimeout(() => { javaHP.style.width = "70%"; }, 1000);
       setTimeout(() => { pythonHP.style.width = "80%"; }, 2000);
-      setTimeout(() => { javaHP.style.width = "10%"; }, 3000);
-      setTimeout(() => { pythonHP.style.width = "100%"; }, 4000);
+      setTimeout(() => { javaHP.style.width = "40%"; }, 3000);
+      setTimeout(() => { pythonHP.style.width = "70%"; }, 4000);
+      setTimeout(() => { javaHP.style.width = "10%"; }, 1000);
+      setTimeout(() => { javaHP.style.width = "0%"; }, 1000);
       setTimeout(() => {
         result.style.display = "block";
-        result.textContent = "🐍 Python WYGRYWA! Java nie ma szans!";
+        result.textContent = "Python WYGRYWA! Java nie ma szans!";
       }, 5000);
     }
   </script>
